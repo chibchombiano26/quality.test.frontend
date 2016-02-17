@@ -15,15 +15,15 @@
         sref: '.dashboard'
       },
       {
-        name: 'Profile',
-        icon: 'person',
-        sref: '.profile'
+        name: 'Books',
+        icon: 'view_module',
+        sref: '.library'
       },
       {
-        name: 'Table',
-        icon: 'view_module',
-        sref: '.table'
-      }
+        name: 'Authors',
+        icon: 'person',
+        sref: '.authors'
+      },
     ];
 
     return {

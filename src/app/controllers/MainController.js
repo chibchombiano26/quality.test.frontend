@@ -59,7 +59,7 @@
 
           vm.actions = [
             { name: 'Share', icon: 'share', url: 'https://twitter.com/intent/tweet?text=Angular%20Material%20Dashboard%20https://github.com/flatlogic/angular-material-dashboard%20via%20@flatlogicinc' },
-            { name: 'Star', icon: 'star', url: 'https://github.com/flatlogic/angular-material-dashboard/stargazers' }
+            { name: 'Star', icon: 'star', url: 'https://github.com/chibchombiano26/quality.test.frontend.git' }
           ];
 
           vm.performAction = function(action) {

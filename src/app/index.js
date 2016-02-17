@@ -5,6 +5,9 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies', 'ngTouch',
 
   .config(function ($stateProvider, $urlRouterProvider, $mdThemingProvider,
                     $mdIconProvider) {
+                      
+
+                      
     $stateProvider
       .state('home', {
         url: '',
@@ -29,15 +32,25 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies', 'ngTouch',
           title: 'Profile'
         }
       })
-      .state('home.table', {
-        url: '/table',
-        controller: 'TableController',
+      .state('home.library', {
+        url: '/library',
+        templateUrl: 'app/views/library.html',
+        controller: 'libraryCtrl',
         controllerAs: 'vm',
-        templateUrl: 'app/views/table.html',
         data: {
-          title: 'Table'
+          title: 'Library'
         }
-      });
+      })
+      .state('home.authors', {
+        url: '/authors',
+        templateUrl: 'app/views/authors.html',
+        controller: 'authorsCtrl',
+        controllerAs: 'vm',
+        data: {
+          title: 'Authors'
+        }
+      })
+      ;
 
     $urlRouterProvider.otherwise('/dashboard');
 

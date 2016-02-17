@@ -1,0 +1,49 @@
+<style type="text/css">
+    .imageLibrary {
+        height: 100px;
+    }
+</style>
+
+<button class="md-raised md-warn md-button md-default-theme" ng-click="new($event)">
+    <span class="ng-scope">
+            Add
+        </span>
+</button>
+
+
+<div class="table-responsive-vertical md-whiteframe-z1">
+    <table id="table" class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Edit</th>
+                <th>Imagen</th>
+                <th>Author</th>
+                <th>Description</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in Books">
+                <td data-title="ID">{{$index + 1}}</td>
+                <td data-title="Edit">
+                    <button class="md-raised md-warn md-button md-default-theme" ng-click="editAction($event, item)">
+                        <span class="ng-scope">
+                            Edit
+                        </span>
+                    </button>
+                </td>
+                <td data-title="Image"><img class="imageLibrary" ng-src="{{item.UrlImage}}"></td>
+                <td data-title="Autor">{{item.Author.Name}}</td>
+                <td data-title="Description">{{item.Description}}</td>
+                <td data-title="Delete">
+                    <button class="md-raised md-warn md-button md-default-theme" ng-click="delete($index, item)">
+                        <span class="ng-scope">
+                            Delete
+                        </span>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

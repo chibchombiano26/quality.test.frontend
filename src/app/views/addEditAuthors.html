@@ -1,0 +1,40 @@
+<md-dialog aria-label="Add/Edit Book"  ng-cloak>
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Add/Edit Book</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        
+
+            <md-input-container md-no-float class="md-block">
+                <input ng-model="Author.Name" type="text" placeholder="name">
+            </md-input-container>
+            
+            
+            
+            <md-autocomplete md-selected-item="Author.Country" md-search-text="searchText" md-items="item in Countries" md-item-text="item.Description">
+              <span md-highlight-text="searchText">{{item.Description}}</span>
+            </md-autocomplete>
+            
+        
+        
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="addOrEdit()">
+       Save
+      </md-button>
+      <md-button ng-click="cancel()" style="margin-right:20px;">
+        Cancel
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
